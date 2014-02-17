@@ -1,13 +1,13 @@
 www
 ===
 
-haproxy and apache tomcat configurations and start-stop cshell scripts.
-alls apps. are meant to be run as user, not root, listening on non-root
-tcp ports.
+Haproxy and apache tomcat configurations with start-stop cshell scripts.
 
-iptables is configure to accept port 80 redirected to 9080, and port 443\
-redirected to 9443.
+All servers are meant to be run as user, listening on non-root TCP ports.
 
-the haproxy https frontend config includes basic authentication and is
+iptables is configure to accepts port 80 and port 443. Port 80 is redirected
+to 9080, while port 443 is redirected to 9443 (see iptables-save.txt).
+
+The haproxy https frontend config includes basic authentication and is
 configured for ssl via a cacert-private key merged file. tomcat and nodej
 backends are configured for http. 
