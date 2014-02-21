@@ -23,7 +23,7 @@ set opt = "start" # or stop or restart
 if ( "$1" != "" ) set opt = "$1"
 #
 pkill tail >& /dev/null
-echo "------------------------- $opt -------------------------"
+echo "------------------------- $0 $opt -------------------------"
 if ( "$opt" == "stop" ) then
   echo shutting down tomcat runtimes \(production and release candidate\) and PRESERVING all logs 
   env CATALINA_BASE=${CATALINA} ${CATALINA}/bin/shutdown.sh >& /dev/null
