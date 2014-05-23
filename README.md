@@ -1,7 +1,7 @@
 www
 ===
 
-Haproxy and apache tomcat configurations with start-stop cshell scripts.
+Haproxy with Apache Tomcat and NodeJS backend configurations with start-stop cshell scripts.
 
 All servers are meant to be run as user, listening on non-root TCP ports.
 
